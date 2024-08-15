@@ -1,11 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* variavel local (funciona em dentro da classe ou do componente do arquivo css) */
+/* variavel global (funciona em todo arquivo css) */
+:root {
+    --azul-dnc: #0c70f2;
+    --preto-dnc: #303030;
+    --cinza-hover: #c9c9c9;
+
+    --fonte-padrao: "Inter";
+}
+
+
 
 body {
     margin: 0px;
     /* margem externa */
     padding: 0px;
     /* margem interna */
+    background: linear-gradient(180deg, #0c70f280 19.91%, #0c70f200 24.84%), #303030;
+    background-repeat: no-repeat;
 }
 
 /* MENU DE NAVEGAÇÃO SUPERIOR */
@@ -36,7 +49,7 @@ body {
     text-decoration: none;
 }
 
-#principal div a:hover{
+#principal div a:hover {
     color: #cccccc;
 }
 
@@ -52,5 +65,103 @@ body {
     font-weight: 600;
     color: #ffffff;
     box-shadow: 3px 2px 4px #0C70F240;
+    cursor: pointer;
+}
+
+/* seção principal do site */
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+header{
+    color: #ffffff;
+    font-family: var(--fonte-padrao);
+}
+
+header h1{
+    text-align: center;
+    font-size: 80px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+header h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+
+header .invert{
+    background-color: #000000;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+/* formulário */ 
+
+form{
+    color: #FFFFFF;
+    font-family: var(--fonte-padrao);
+    font-size: 30px;
+    font-weight: 600;
+    width: 600px;
+}
+
+.formGroup{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+form label{
+    margin: 10px 0px 10px 0px;
+}
+
+form input{
+    border-radius: 10px;
+    border: 0px;
+    height: 30px;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #FFFFFFE5;
+}
+
+form input::placeholder{
+    color: #39393980;
+}
+
+.checkboxItens label{
+    font-size: 25px;
+}
+
+.checkboxItens{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input[type="checkbox"]{
+    transform: scale(1.7);
+}
+
+input[type="submit"]{
+    background-color: #0C70F2E5;
+    width: 100%;
+    height: 56px;
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: var(--fonte-padrao);
+    margin-top: 100px;
+    box-shadow: 0px 6px 4px 0px #0C70F240;
     cursor: pointer;
 }
