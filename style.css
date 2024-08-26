@@ -299,4 +299,10 @@ footer .linha2 a:hover{
     .checkboxItens label{
         font-size: 16px;
     }
+
+    /* footer */
+
+    footer .linha1{
+        flex-direction: column;
+    }
 }
